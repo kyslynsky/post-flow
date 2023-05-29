@@ -1,0 +1,29 @@
+.s {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.m {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.black {
+  color: var(--black);
+}
+
+.red {
+  color: var(--red);
+}
+
+@media screen and (min-width: 768px) {
+  .s {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .m {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
