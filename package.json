@@ -2,6 +2,7 @@
   "name": "post-flow",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kyslynsky.github.io/post-flow/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
