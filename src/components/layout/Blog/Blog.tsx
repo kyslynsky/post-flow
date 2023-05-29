@@ -42,7 +42,7 @@ export const Blog = () => {
                 <PTag size="m" texttransform="Capitalize">
                   {p.body}
                 </PTag>
-                <hr />
+                <hr className={styles.divider} />
                 <Comments postId={postId} />
               </li>
             </ul>

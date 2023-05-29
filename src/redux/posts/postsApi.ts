@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IPost, IComment } from "../../interfaces";
+import { IFormData } from "../../components/common/AddPostForm/AddPostForm";
 
 export const postsApi = createApi({
   reducerPath: "posts",
@@ -22,11 +23,14 @@ export const postsApi = createApi({
       }),
       providesTags: ["Posts", "Comments"],
     }),
-    addPost: build.mutation<IPost, Partial<IPost>>({
-      query: body => ({
+    addPost: build.mutation<IPost, { userId: string; data: IFormData }>({
+      query: ({ userId, data }) => ({
         url: `posts`,
         method: "POST",
-        body,
+        body: {
+          ...data,
+          userId,
+        },
       }),
       invalidatesTags: ["Posts"],
     }),

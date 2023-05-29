@@ -5,7 +5,7 @@
   --blue: #0284d0;
   --green: #28a745;
   --light-green: #2ebf4f;
-  --grey: #808080;
+  --grey: #d9d4d4;
   --light-grey: #f4f4f4;
   --red: #eb5757;
   --linear-grad: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -61,4 +61,12 @@ textarea {
 
 .swiper-pagination-bullet-active {
   background: #007aff;
+}
+
+.react-modal-sheet-container {
+  background-color: var(--grey) !important;
+}
+
+.react-modal-sheet-content {
+  padding: 80px 40px;
 }
