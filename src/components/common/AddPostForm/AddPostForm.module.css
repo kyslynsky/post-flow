@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input {
+  padding: 16px 8px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 16px;
+  width: 100%;
+  outline-color: var(--green);
+  font-size: 18px;
+}
+
+.textarea {
+  padding: 16px 8px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 35vh;
+  outline-color: var(--green);
+  font-size: 18px;
+  resize: none;
+}
+
+.submitBtn {
+  margin-top: 24px;
+}
+
+.errors {
+  outline-color: var(--red);
+}
+
+.errorMsg {
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    font-size: 18px;
+  }
+
+  .textarea {
+    font-size: 18px;
+  }
+}
