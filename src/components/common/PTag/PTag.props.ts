@@ -7,5 +7,6 @@ export interface PTagProps
   > {
   size?: "s" | "m";
   color?: "black" | "red";
+  texttransform?: "Uppercase" | "Capitalize";
   children: ReactNode;
 }
