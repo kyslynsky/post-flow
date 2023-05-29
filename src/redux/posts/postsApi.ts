@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IPost } from "../../interfaces";
+import { IPost, IComment } from "../../interfaces";
 
 export const postsApi = createApi({
   reducerPath: "posts",
@@ -15,7 +15,26 @@ export const postsApi = createApi({
       }),
       providesTags: ["Posts"],
     }),
+    getCommentsByPostId: build.query<IComment[], number>({
+      query: id => ({
+        url: `comments?postId=${id}`,
+        method: "GET",
+      }),
+      providesTags: ["Posts", "Comments"],
+    }),
+    addPost: build.mutation<IPost, Partial<IPost>>({
+      query: body => ({
+        url: `posts`,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: ["Posts"],
+    }),
   }),
 });
 
-export const { useGetAllPostsQuery } = postsApi;
+export const {
+  useGetAllPostsQuery,
+  useGetCommentsByPostIdQuery,
+  useAddPostMutation,
+} = postsApi;

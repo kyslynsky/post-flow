@@ -5,6 +5,7 @@ import cn from "classnames";
 export const PTag = ({
   size,
   color,
+  texttransform,
   className,
   children,
   ...props
@@ -16,6 +17,8 @@ export const PTag = ({
         [styles.m]: size === "m",
         [styles.black]: color === "black",
         [styles.red]: color === "red",
+        [styles.uppercase]: texttransform === "Uppercase",
+        [styles.capitalize]: texttransform === "Capitalize",
       })}
       {...props}
     >
