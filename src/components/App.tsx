@@ -10,6 +10,9 @@ function App() {
       <main>
         <Blog />
       </main>
+      <footer style={{ marginTop: "20px", padding: "40px" }}>
+        <div>1</div>
+      </footer>
       <ToastContainer transition={Zoom} />
     </>
   );

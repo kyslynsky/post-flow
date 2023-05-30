@@ -48,6 +48,13 @@ textarea {
   font-family: inherit;
 }
 
+.swiper-slide {
+  height: 75vh !important;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
 .swiper-pagination-bullet {
   width: 24px !important;
   height: 22px !important;
@@ -59,8 +66,12 @@ textarea {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.swiper-pagination-bullet:hover {
+  background: var(--blue);
+}
+
 .swiper-pagination-bullet-active {
-  background: #007aff;
+  background: var(--blue);
 }
 
 .react-modal-sheet-container {
@@ -69,4 +80,40 @@ textarea {
 
 .react-modal-sheet-content {
   padding: 80px 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .swiper-slide {
+    height: 60vh !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-slide {
+    height: 70vh !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto !important;
+    bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    height: 50vh !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    height: 40vh !important;
+  }
+}
+
+@media screen and (min-width: 1560px) {
+  .swiper-slide {
+    height: 15vh !important;
+  }
 }
