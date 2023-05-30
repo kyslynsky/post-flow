@@ -20,15 +20,22 @@ export const Comments = ({
     <div className={cn(className, styles.comments)} {...props}>
       {comments && (
         <>
-          <HTag tag="h2" >Comments:</HTag>
+          <HTag tag="h2">Comments:</HTag>
+          <hr className={styles.divider} />
           <ul>
             {comments &&
               comments.map(c => (
                 <li key={c.id} className={styles.listItem}>
-                  <PTag size="m">{c.email}</PTag>
                   <HTag tag="h3">{c.name}</HTag>
-                  <PTag size="s">{c.body}</PTag>
-                  <hr />
+                  <PTag
+                    className={styles.comment}
+                    size="s"
+                    texttransform="Capitalize"
+                  >
+                    {c.body}
+                  </PTag>
+                  <a className={styles.userEmail} href={`mailto:${c.email}`}>{c.email}</a>
+                  <hr className={styles.divider} />
                 </li>
               ))}
           </ul>

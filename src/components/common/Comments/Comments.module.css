@@ -1,3 +1,20 @@
+.comments {
+  margin-top: 20px;
+}
+
+.divider {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
 .listItem:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 5px;
+}
+
+.userEmail {
+  color: var(--blue);
 }
