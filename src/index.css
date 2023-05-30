@@ -48,6 +48,11 @@ textarea {
   font-family: inherit;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .swiper-slide {
   height: 75vh !important;
   padding-bottom: 10px;

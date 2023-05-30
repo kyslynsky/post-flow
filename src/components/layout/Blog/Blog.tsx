@@ -46,7 +46,6 @@ export const Blog = () => {
         modules={[Pagination, Navigation, Keyboard]}
         className="mySwiper"
         onSlideChange={swiper => setPostId(swiper.activeIndex + 1)}
-        autoHeight
       >
         {posts &&
           posts.map(p => (

@@ -1,20 +1,19 @@
 import { Blog } from "./layout/Blog";
+import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
 import { ToastContainer, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 function App() {
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <main>
         <Blog />
       </main>
-      <footer style={{ marginTop: "20px", padding: "40px" }}>
-        <div>1</div>
-      </footer>
+      <Footer />
       <ToastContainer transition={Zoom} />
-    </>
+    </div>
   );
 }
 
